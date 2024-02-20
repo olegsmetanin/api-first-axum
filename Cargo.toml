@@ -1,3 +1,9 @@
 [workspace]
-members = ["petstore-svc"]
+members = ["", "petstore-svc", "petstore-db-svc"]
 resolver = "2"
+
+[workspace.dependencies]
+petstore-api = { path = "petstore-api" }
+
+[profile.release]
+opt-level = "s"
